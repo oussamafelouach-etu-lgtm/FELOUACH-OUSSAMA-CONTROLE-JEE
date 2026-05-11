@@ -13,8 +13,9 @@ import org.sid.controlespring.enums.TypeCarburant;
 
 
 @Data
-public class VoitureDTO  {
+public class VoitureDTO  extends VehiculeDTO{
     private int nombrePortes;
     private TypeCarburant typeCarburant;
     private BoiteVitesse boiteVitesse;
+
 }

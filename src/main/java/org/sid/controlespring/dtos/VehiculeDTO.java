@@ -1,6 +1,7 @@
 package org.sid.controlespring.dtos;
 
 import lombok.Data;
+import org.sid.controlespring.enums.StatutVehicule;
 
 import java.time.LocalDate;
 
@@ -12,7 +13,7 @@ public class VehiculeDTO {
     private String matricule;
     private double prixParJour;
     private LocalDate dateMiseEnService;
-    private String statut;
+    private StatutVehicule statut;
     private Long agenceId;
 
 }
