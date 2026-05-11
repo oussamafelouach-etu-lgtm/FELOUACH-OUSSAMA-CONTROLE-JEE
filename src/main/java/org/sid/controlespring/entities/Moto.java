@@ -3,26 +3,19 @@ package org.sid.controlespring.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.sid.controlespring.enums.BoiteVitesse;
-import org.sid.controlespring.enums.TypeCarburant;
 import org.sid.controlespring.enums.TypeMoto;
-
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Voiture extends Vehicule{
-    private int nombrePortes;
-
+public class Moto extends Vehicule{
+    private double cylindree;
     @Enumerated(EnumType.STRING)
-    private TypeCarburant typeCarburant;
+    private TypeMoto typeMoto;
 
-    @Enumerated(EnumType.STRING)
-    private BoiteVitesse boiteVitesse;
-
+    private boolean casqueInclus;
 }

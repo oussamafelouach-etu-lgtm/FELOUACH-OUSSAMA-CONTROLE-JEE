@@ -1,13 +1,18 @@
 package org.sid.controlespring.entities;
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.sid.controlespring.enums.StatutVehicule;
 
 import java.time.LocalDate;
-
+import java.util.List;
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Vehicule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
