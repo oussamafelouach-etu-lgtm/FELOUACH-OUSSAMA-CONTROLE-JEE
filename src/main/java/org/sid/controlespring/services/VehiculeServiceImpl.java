@@ -103,10 +103,11 @@ public class VehiculeServiceImpl implements VehiculeService {
     @Override
     public List<AgenceDTO> getAllAgences() {
 
-        return agenceRepository.findAll()
+        List<AgenceDTO> collect = agenceRepository.findAll()
                 .stream()
                 .map(mapper::fromAgence)
                 .collect(Collectors.toList());
+        return collect;
     }
 
     @SneakyThrows
