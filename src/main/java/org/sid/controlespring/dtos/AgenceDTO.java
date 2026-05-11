@@ -9,4 +9,5 @@ public class AgenceDTO {
     private String adresse;
     private String ville;
     private String telephone;
+    
 }
